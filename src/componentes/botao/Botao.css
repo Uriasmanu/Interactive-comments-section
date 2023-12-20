@@ -1,0 +1,11 @@
+.Botao{
+    display: flex;
+    flex-direction: column;
+    width: 5%;
+    background: hsl(228, 33%, 97%);
+
+}
+
+.Botao button, input {
+    border: none;
+}

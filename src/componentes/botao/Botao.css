@@ -3,9 +3,22 @@
     flex-direction: column;
     width: 5%;
     background: hsl(228, 33%, 97%);
-
+    margin: 4% 4%;
+    border-radius: 12%;
+    overflow: overlay;
 }
 
-.Botao button, input {
+.Botao button,
+.Botao input {
     border: none;
+    background-color: hsl(228, 33%, 97%);
+    height: 25px;
+    color: hsl(238, 40%, 52%);
+    font-weight: bold;
+    text-align: center;
+
+    &:hover {
+       cursor: pointer;
+    }
 }
+

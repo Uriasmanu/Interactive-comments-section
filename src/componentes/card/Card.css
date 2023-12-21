@@ -2,7 +2,9 @@
 .Card {
     background: #fff;
     width: 50%;
-    height: 100px;
+    height: 121px;
     border-radius: 5px;
+    display: flex;
+    
   }
   

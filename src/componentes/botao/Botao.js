@@ -11,7 +11,7 @@ export const Botao = () => {
       <button>
         <img src={mais}/>
       </button>
-      <input></input>
+      <input type='text' value={12} />
       <button>
         <img src={menos}/>
       </button>

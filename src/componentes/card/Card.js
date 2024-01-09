@@ -13,7 +13,7 @@ export const Card = () => {
       <Botao/>
       <div className='Perfil-itens'>
         <Perfil/>
-       <Textos/>
+       <Textos texto="Inpressvel Though it seems the dung feature omund be enproved But everal it looks incredible. You've nailed the design and the responsiveness afrou peints works mally wel"/>
       </div>
     </div>
   );

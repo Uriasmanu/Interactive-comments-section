@@ -2,10 +2,11 @@
 .Card {
     background: #fff;
     width: 50%;
-    height: 121px;
+    height: auto;
     border-radius: 5px;
     display: flex;
-    
+    padding: 1%;
+    margin-top: 2%;
   }
 
   .Perfil-itens{

@@ -8,7 +8,7 @@
     padding: 1%;
     margin-top: 5px;
     justify-content: space-between;
-
+    box-shadow: 5px 6px 11px rgba(0, 0, 0,0.1);
 }
 
 .container-Texto img {

@@ -1,0 +1,11 @@
+.reply{
+    margin-top: 25%;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    font-weight: bold;
+    color: hsl(238, 40%, 52%);
+    cursor: pointer;
+}

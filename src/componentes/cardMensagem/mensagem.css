@@ -1,0 +1,42 @@
+.container-Texto{
+    display: flex;
+    background: #fff;
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    display: flex;
+    padding: 1%;
+    margin-top: 5px;
+    justify-content: space-between;
+
+}
+
+.container-Texto img {
+    width: 30px;
+    height: 30px;
+    margin-left: 4%;
+}
+
+.input {
+    width: 70%;
+    height: 80px;
+}
+
+.input input{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: solid 1px hsl(238, 40%, 52%);
+    cursor: pointer;
+}
+
+.container-Texto button{
+    border: none;
+    border-radius: 10px;
+    background: hsl(238, 40%, 52%);
+    font-weight: bold;
+    color: #fff;
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+}

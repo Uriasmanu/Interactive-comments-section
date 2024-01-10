@@ -1,4 +1,10 @@
 /* Card.css */
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .Card {
     background: #fff;
     width: 50%;

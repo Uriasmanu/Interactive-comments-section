@@ -13,7 +13,7 @@ export const CardMensagem = () => {
 
     return (
         <div className='container-Texto'>
-            <img src={perfil} />
+            <img src={perfil} alt='foto de perfil'/>
             <div className='input'>
                 <label htmlFor="caixaDeTexto"></label>
                 <input

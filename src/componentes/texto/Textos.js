@@ -1,9 +1,9 @@
 import React from "react";
 import './Textos.css'
 
- const Textos = (props) => {
+ const Textos = ({texto}) => {
    return(
-      <p>{props.texto}</p> 
+      <p>{texto}</p> 
    )
     
  }

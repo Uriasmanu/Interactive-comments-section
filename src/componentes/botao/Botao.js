@@ -20,11 +20,11 @@ export const Botao = () => {
   return (
     <div className="Botao">
       <button onClick={aumentar}>
-        <img src={mais}/>
+        <img src={mais} alt='botoa de mais' />
       </button>
       <input type='text' value={valor} />
       <button onClick={diminuir} >
-        <img src={menos}/>
+        <img src={menos} alt='botoa de menos'/>
       </button>
     </div>
   );

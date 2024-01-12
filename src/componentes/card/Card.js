@@ -7,8 +7,15 @@ import Textos from '../texto/Textos';
 import { Reply } from '../reply';
 import { CardMensagem } from '../cardMensagem';
 
-export const Card = ({ nome, foto, texto }) => {
-  const [exibirCardMensagem, setExibirCardMensagem] = useState(true);
+export const Card = ({ nome, foto, texto, comentariosIniciais }) => {
+  const [comentarios, setComentarios] = useState(comentariosIniciais || []);
+  const [exibirCardMensagem, setExibirCardMensagem] = useState(false);
+  const [fotoCardMensagem, setFotoCardMensagem] = useState(true); // Adicione o estado para a foto do CardMensagem
+
+  const adicionarComentario = (novoComentario) => {
+    setComentarios([...comentarios, { ...novoComentario, foto: fotoCardMensagem }]);
+    setExibirCardMensagem(false); // Feche o CardMensagem após adicionar um comentário
+  };
 
   const botaoCardMensagem = () => {
     setExibirCardMensagem(!exibirCardMensagem);
@@ -24,7 +31,22 @@ export const Card = ({ nome, foto, texto }) => {
         </div>
         <Reply onReplyClick={botaoCardMensagem} />
       </div>
-      {exibirCardMensagem || <CardMensagem />}
+      {comentarios.map((comentario, index) => (
+        <div key={index} className="comentario">
+          <Card
+            nome={comentario.nome}
+            foto={comentario.foto}
+            texto={comentario.texto}
+            comentariosIniciais={comentario.comentarios}
+          />
+        </div>
+      ))}
+      {exibirCardMensagem && (
+        <CardMensagem
+          onReply={adicionarComentario}
+          setFotoCardMensagem={setFotoCardMensagem} // Passe a função para definir a foto do CardMensagem
+        />
+      )}
     </div>
   );
 };

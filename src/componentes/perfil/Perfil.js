@@ -1,14 +1,19 @@
+// Perfil.js
 import React from 'react';
 import './Perfil.css';
 
-import foto from '../images/avatars/image-amyrobson.png'
-
-export const Perfil = () => {
-    return (
-        <div className='Perfil'>
-            <img src={foto}/>
-            <p>amyrobson</p>
-            <p>1 month ago</p>
-        </div>
-    )
+function numeroAleatorio() {
+    return Math.floor(Math.random() * 12) + 1;
 }
+
+export const Perfil = ({ nome, foto }) => {
+    const meses = numeroAleatorio();
+
+  return (
+    <div className='Perfil'>
+      <img src={foto} alt='foto de perfil' />
+      <p>{nome}</p>
+      <p>{meses} month ago</p>
+    </div>
+  );
+};

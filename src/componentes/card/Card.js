@@ -1,5 +1,5 @@
 // Card.js
-import React from 'react';
+import React, { useState } from 'react';
 import './Card.css';
 import { Botao } from '../botao/Botao';
 import { Perfil } from '../perfil/Perfil';
@@ -7,20 +7,46 @@ import Textos from '../texto/Textos';
 import { Reply } from '../reply';
 import { CardMensagem } from '../cardMensagem';
 
+export const Card = ({ nome, foto, texto, comentariosIniciais }) => {
+  const [comentarios, setComentarios] = useState(comentariosIniciais || []);
+  const [exibirCardMensagem, setExibirCardMensagem] = useState(false);
+  const [fotoCardMensagem, setFotoCardMensagem] = useState(true); // Adicione o estado para a foto do CardMensagem
 
+  const adicionarComentario = (novoComentario) => {
+    setComentarios([...comentarios, { ...novoComentario, foto: fotoCardMensagem }]);
+    setExibirCardMensagem(false); // Feche o CardMensagem após adicionar um comentário
+  };
 
-export const Card = () => {
+  const botaoCardMensagem = () => {
+    setExibirCardMensagem(!exibirCardMensagem);
+  };
+
   return (
     <div className='container'>
-    <div className="Card">
-      <Botao/>
-      <div className='Perfil-itens'>
-        <Perfil/>
-       <Textos texto="Inpressvel Though it seems the dung feature omund be enproved But everal it looks incredible. You've nailed the design and the responsiveness afrou peints works mally wel"/>
+      <div className="Card">
+        <Botao />
+        <div className='Perfil-itens'>
+          <Perfil nome={nome} foto={foto} />
+          <Textos texto={texto} />
+        </div>
+        <Reply onReplyClick={botaoCardMensagem} />
       </div>
-      <Reply/>
-    </div>
-    <CardMensagem/>
+      {comentarios.map((comentario, index) => (
+        <div key={index} className="comentario">
+          <Card
+            nome={comentario.nome}
+            foto={comentario.foto}
+            texto={comentario.texto}
+            comentariosIniciais={comentario.comentarios}
+          />
+        </div>
+      ))}
+      {exibirCardMensagem && (
+        <CardMensagem
+          onReply={adicionarComentario}
+          setFotoCardMensagem={setFotoCardMensagem} // Passe a função para definir a foto do CardMensagem
+        />
+      )}
     </div>
   );
 };

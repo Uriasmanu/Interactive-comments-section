@@ -1,24 +1,51 @@
 /* Card.css */
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .Card {
+  background: #fff;
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+  display: flex;
+  padding: 1%;
+  margin-top: 2%;
+  box-shadow: 5px 6px 11px rgba(0, 0, 0, 0.1);
+}
+
+.Perfil-itens {
+  width: 77%;
+  display: flex;
+  flex-direction: column;
+}
+
+.comentario {
+  width: 90%;
+}
+
+
+@media (max-width: 600px) {
+  .Card {
     background: #fff;
-    width: 50%;
-    height: auto;
+    width: 60%;
+    height: 319px;
     border-radius: 5px;
     display: flex;
-    padding: 1%;
+    padding: 6%;
     margin-top: 2%;
-    box-shadow: 5px 6px 11px rgba(0, 0, 0,0.1);
+    box-shadow: 5px 6px 11px rgba(0, 0, 0, 0.1);
   }
 
-  .Perfil-itens{
-    width: 77%;
+  .Perfil-itens {
+    width: 90%;
     display: flex;
     flex-direction: column;
   }
-  
+
+  .comentario {
+    width: 90%;
+  }
+}

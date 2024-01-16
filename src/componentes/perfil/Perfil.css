@@ -1,5 +1,4 @@
-
-.Perfil{
+.Perfil {
     margin-top: 3%;
     display: flex;
     justify-content: space-between;
@@ -11,11 +10,23 @@
 .Perfil img {
     width: 25px;
     height: 25px;
-    
+
 }
 
-.Perfil p{
+.Perfil p {
     color: hsl(212, 24%, 26%);
     font-size: 12px;
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .Perfil {
+        margin-top: 3%;
+        display: flex;
+        justify-content: space-between;
+        width: 140%;
+        height: 30px;
+        align-items: center;
+
+    }
 }

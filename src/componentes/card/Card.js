@@ -7,6 +7,8 @@ import Textos from '../texto/Textos';
 import { Reply } from '../reply';
 import { CardMensagem } from '../cardMensagem';
 
+import perfil from '../images/avatars/image-juliusomo.png';
+
 export const Card = ({ nome, foto, texto, comentariosIniciais }) => {
   const [comentarios, setComentarios] = useState(comentariosIniciais || []);
   const [exibirCardMensagem, setExibirCardMensagem] = useState(false);
@@ -35,7 +37,7 @@ export const Card = ({ nome, foto, texto, comentariosIniciais }) => {
         <div key={index} className="comentario">
           <Card
             nome={comentario.nome}
-            foto={comentario.foto}
+            foto={perfil}
             texto={comentario.texto}
             comentariosIniciais={comentario.comentarios}
           />

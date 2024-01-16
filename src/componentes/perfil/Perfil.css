@@ -30,3 +30,15 @@
 
     }
 }
+
+@media (max-width: 1000px) {
+    .Perfil {
+        margin-top: 3%;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        height: 30px;
+        align-items: center;
+
+    }
+}

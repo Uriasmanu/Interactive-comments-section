@@ -44,3 +44,24 @@
         width: 32%;
     }
 }
+
+@media (max-width: 1000px) {
+    .Botao {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        background: hsl(228, 33%, 97%);
+        margin: 4% 4%;
+        border-radius: 12%;
+        overflow: overlay;
+    }
+
+    .Botao input {
+        border: none;
+        background-color: hsl(228, 33%, 97%);
+        height: 35%;
+        color: hsl(238, 40%, 52%);
+        font-weight: bold;
+        text-align: center;
+    }
+}

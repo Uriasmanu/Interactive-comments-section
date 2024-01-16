@@ -31,7 +31,11 @@ function App() {
       foto: foto3,
       texto: "@maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead, but lay a solid foundation first.",
       comentarios: [
+<<<<<<< HEAD
         { nome: 'maxblagun', foto: foto2, texto: "" },
+=======
+        { nome: 'maxblagun', foto: foto2, texto: "@amyrobson Thank you! I\'ll check out the React documentation and some courses." },
+>>>>>>> 13a9f114d81b226568c082b5560bfe6a632e3c53
       ],
     },
   ];

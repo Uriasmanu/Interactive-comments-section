@@ -7,7 +7,6 @@ import Textos from '../texto/Textos';
 import { Reply } from '../reply';
 import { CardMensagem } from '../cardMensagem';
 
-<<<<<<< HEAD
 import perfil from '../images/avatars/image-juliusomo.png';
 
 export const Card = ({ nome, foto, texto, comentariosIniciais }) => {
@@ -15,13 +14,6 @@ export const Card = ({ nome, foto, texto, comentariosIniciais }) => {
   const [exibirCardMensagem, setExibirCardMensagem] = useState(false);
   const [fotoCardMensagem, setFotoCardMensagem] = useState(true); // Adicione o estado para a foto do CardMensagem
 
-=======
-export const Card = ({ nome, foto, texto, comentariosIniciais }) => {
-  const [comentarios, setComentarios] = useState(comentariosIniciais || []);
-  const [exibirCardMensagem, setExibirCardMensagem] = useState(false);
-  const [fotoCardMensagem, setFotoCardMensagem] = useState(true); // Adicione o estado para a foto do CardMensagem
-
->>>>>>> 13a9f114d81b226568c082b5560bfe6a632e3c53
   const adicionarComentario = (novoComentario) => {
     setComentarios([...comentarios, { ...novoComentario, foto: fotoCardMensagem }]);
     setExibirCardMensagem(false); // Feche o CardMensagem após adicionar um comentário
@@ -45,11 +37,7 @@ export const Card = ({ nome, foto, texto, comentariosIniciais }) => {
         <div key={index} className="comentario">
           <Card
             nome={comentario.nome}
-<<<<<<< HEAD
             foto= {perfil}
-=======
-            foto={comentario.foto}
->>>>>>> 13a9f114d81b226568c082b5560bfe6a632e3c53
             texto={comentario.texto}
             comentariosIniciais={comentario.comentarios}
           />

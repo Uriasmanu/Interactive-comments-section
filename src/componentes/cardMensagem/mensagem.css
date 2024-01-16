@@ -1,11 +1,11 @@
 .container-Texto{
     display: flex;
     background: #fff;
-    width: 40rem;
+    width: 50%;
     height: auto;
     border-radius: 5px;
     display: flex;
-    padding: 2%;
+    padding: 1%;
     margin-top: 5px;
     justify-content: space-between;
     box-shadow: 5px 6px 11px rgba(0, 0, 0,0.1);

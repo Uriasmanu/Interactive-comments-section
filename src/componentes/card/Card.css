@@ -7,14 +7,13 @@
 
 .Card {
     background: #fff;
-    width: 40rem;
+    width: 50%;
     height: auto;
     border-radius: 5px;
     display: flex;
     padding: 1%;
     margin-top: 2%;
     box-shadow: 5px 6px 11px rgba(0, 0, 0,0.1);
-    padding: 2%;
   }
 
   .Perfil-itens{
@@ -22,24 +21,4 @@
     display: flex;
     flex-direction: column;
   }
-
-
-.comentario{
-  width: 90%;
-}
-
-@media (max-width: 600px) {
-    
-  .Card {
-    background: #fff;
-    width: 90%;
-    height: auto;
-    border-radius: 5px;
-    display: flex;
-    padding: 1%;
-    margin-top: 2%;
-    box-shadow: 5px 6px 11px rgba(0, 0, 0,0.1);
-    padding: 2%;
-  }
-
-}
+  
